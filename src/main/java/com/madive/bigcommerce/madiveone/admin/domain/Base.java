@@ -1,13 +1,13 @@
 package com.madive.bigcommerce.madiveone.admin.domain;
 
-import java.util.Date;
+import java.sql.Timestamp;
 
 import lombok.Data;
 
 @Data
 public class Base {
 	private String regId;	
-	private Date regDate; 
+	private Timestamp regDt; 
 	private String updId;
-	private Date updDate;
+	private Timestamp updDt;
 }

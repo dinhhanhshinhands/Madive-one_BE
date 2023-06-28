@@ -11,6 +11,15 @@
 	    		<when test="condition == 'compyConHol'">
 					AND MCM.COMPY_CON_HOL like CONCAT('%',#{keyword},'%')
 	    		</when>
+	    		<when test="condition == 'compyDom'">
+					AND MCM.COMPY_DOM like CONCAT('%',#{keyword},'%')
+	    		</when>
+	    		<when test="condition == 'compyConStrDt'">
+					AND MCM.COMPY_CON_STR_DT like CONCAT('%',#{keyword},'%')
+	    		</when>
+	    		<when test="condition == 'compyEndDt'">
+					AND MCM.COMPY_CON_END_DT like CONCAT('%',#{keyword},'%')
+	    		</when>
     		</choose>
     	</if>
     </select>
