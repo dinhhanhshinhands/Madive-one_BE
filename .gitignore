@@ -1,0 +1,11 @@
+/.project
+/.settings/
+/target/
+/.classpath
+/.factorypath
+/bin/
+
+.idea
+build
+.gradle
+structure101-settings.java.hsw

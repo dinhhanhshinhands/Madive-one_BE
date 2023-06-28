@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.madive.bigcommerce.madiveone.admin.biz.cp.mapper.CompanyPartnerMapper">
+    <select id="getList" resultType="com.madive.bigcommerce.madiveone.admin.domain.Company">
+        SELECT * FROM MBO_COMPY_MAS AS MCM WHERE MCM.COMPY_STATUS = 1
+    	<if test="condition != null and keyword != null">
+	    	<choose>
+	    		<when test="condition == 'compyNm'">
+    				AND MCM.COMPY_NM like CONCAT('%',#{keyword},'%')
+	    		</when>
+	    		<when test="condition == 'compyConHol'">
+					AND MCM.COMPY_CON_HOL like CONCAT('%',#{keyword},'%')
+	    		</when>
+    		</choose>
+    	</if>
+    </select>
+</mapper>
